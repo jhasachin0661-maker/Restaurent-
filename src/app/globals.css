@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #25231f;
+    --foreground: #f3ebdd;
+
+    --card: #302d27;
+    --card-foreground: #f3ebdd;
+
+    --popover: #302d27;
+    --popover-foreground: #f3ebdd;
+
+    --primary: #77352d;
+    --primary-foreground: #f3ebdd;
+
+    --secondary: #3b3730;
+    --secondary-foreground: #f3ebdd;
+
+    --muted: #3b3730;
+    --muted-foreground: #c2b8a8;
+
+    --accent: #c49a55;
+    --accent-foreground: #25231f;
+
+    --destructive: #77352d;
+    --destructive-foreground: #f3ebdd;
+
+    --border: #5a5146;
+    --input: #5a5146;
+    --ring: #c49a55;
+
+    --radius: 0.5rem;
+
+    /* Conveyor & Chart Tier colors */
+    --chart-1: #8FA382;
+    --chart-2: #B99563;
+    --chart-3: #D07D60;
+    --chart-4: #8A4337;
+    --chart-5: #E5C378;
+
+    /* Component compatibility aliases */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-border: var(--border);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+  }
+}
+
+@theme {
+  --color-obsidian: #25231f;
+  --color-charcoal: #302d27;
+  --color-charcoal-light: #3b3730;
+  --color-ivory: #f3ebdd;
+  --color-ivory-muted: #d9cfbf;
+  --color-gold: #c49a55;
+  --color-gold-light: #d7b878;
+  --color-gold-dark: #94723e;
+  --color-rajwada-red: #77352d;
+  --color-rajwada-red-light: #965148;
+  --color-muted-text: #c2b8a8;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #25231f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b3730;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c49a55;
+}
+
+/* Subtle gold selection */
+::selection {
+  background: #c49a55;
+  color: #25231f;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #f2bb61;
+  outline-offset: 2px;
+}
