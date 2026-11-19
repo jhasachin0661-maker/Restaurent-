@@ -3,8 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Enable static export for GitHub Pages
   output: 'export',
-  // If deploying to https://<user>.github.io/<repo>/, uncomment and set the repo name:
-  // basePath: '/Restaurent-',
+  // Repo name for GitHub Pages: https://jhasachin0661-maker.github.io/Restaurent-/
+  basePath: '/Restaurent-',
 
   /* config options here */
   // cacheComponents disabled for static export
@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
   },
   partialPrefetching: false,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
