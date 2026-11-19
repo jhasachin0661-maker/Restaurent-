@@ -7,8 +7,15 @@ const nextConfig: NextConfig = {
   // basePath: '/Restaurent-',
 
   /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // cacheComponents disabled for static export
+  // cacheComponents: true,
+  // Partial Prefetching disabled for static export
+  // partialPrefetching: false,
+
+  experimental: {
+    ppr: false,
+  },
+  partialPrefetching: false,
   images: {
     remotePatterns: [
       {
