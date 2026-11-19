@@ -1,6 +1,6 @@
 import { Dish } from "@/types/dish";
 
-const image = (name: string) => `/images/rajwada/${name}`;
+const image = (name: string) => `/Restaurent-/images/rajwada/${name}`;
 
 export const DISHES: Dish[] = [
   { id: "dish-bharwan-mushroom", name: "Bharwan Tandoori Mushroom", description: "Charred button mushrooms stuffed with smoked paneer, herbs and green chilli chutney.", price: 420, category: "starters", tier: 2, image: image("kebab-platter.png"), details: ["6 pieces", "Vegetarian", "Charcoal grilled"], dietaryTags: ["Vegetarian", "Chef's Signature"], featured: true, pieces: "6 pcs" },

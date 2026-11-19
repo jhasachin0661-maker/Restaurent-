@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Flame, HeartHandshake, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { assetPath } from "@/lib/utils";
 import { CHEF_INFO } from "@/data/testimonials";
 
 export const metadata: Metadata = {
@@ -22,18 +23,18 @@ export default function OurStoryPage() {
 
         <div className="mb-24 grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="group relative aspect-[4/3] overflow-hidden rounded-sm border border-[#343B2C] shadow-2xl">
-            <Image src="/images/rajwada/dining-room.png" alt="RAJWADA dining room with carved arches and warm golden lighting" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
+            <Image src={assetPath("/images/rajwada/dining-room.png")} alt="RAJWADA dining room with carved arches and warm golden lighting" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#141712]/90 via-transparent to-transparent p-6"><div><span className="block text-[10px] uppercase tracking-widest text-[#B99563]">The atmosphere</span><span className="font-serif text-sm text-[#EDE7D9]">Old-world detail, warm light and unhurried tables</span></div></div>
           </div>
           <div className="group relative aspect-[4/3] overflow-hidden rounded-sm border border-[#343B2C] shadow-2xl">
-            <Image src="/images/rajwada/brass-thali.png" alt="Royal Indian thali served in brass bowls" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
+            <Image src={assetPath("/images/rajwada/brass-thali.png")} alt="Royal Indian thali served in brass bowls" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#141712]/90 via-transparent to-transparent p-6"><div><span className="block text-[10px] uppercase tracking-widest text-[#B99563]">The table</span><span className="font-serif text-sm text-[#EDE7D9]">A generous spread made for sharing</span></div></div>
           </div>
         </div>
 
         <section className="mb-24 rounded-sm border border-[#2F3628] bg-[#191D17] p-8 sm:p-12">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-[#3A4333] lg:col-span-4"><Image src="/images/rajwada/paneer-tikka.png" alt="Paneer tikka prepared over a live tandoor flame" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" /></div>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-[#3A4333] lg:col-span-4"><Image src={assetPath("/images/rajwada/paneer-tikka.png")} alt="Paneer tikka prepared over a live tandoor flame" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" /></div>
             <div className="space-y-5 lg:col-span-8">
               <span className="block text-xs uppercase tracking-[0.25em] text-[#B99563]">{CHEF_INFO.regionalTitle}</span>
               <h2 className="font-serif text-3xl text-[#EDE7D9] sm:text-4xl">{CHEF_INFO.name}</h2>

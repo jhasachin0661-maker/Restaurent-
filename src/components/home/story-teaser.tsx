@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { assetPath } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,7 @@ export function StoryTeaser() {
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] w-full rounded-xs overflow-hidden border border-[#373E31] shadow-2xl">
               <Image
-                src="/images/rajwada/dining-room.png"
+                src={assetPath("/images/rajwada/dining-room.png")}
                 alt="Chef preparing a regional Indian dish over live fire"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

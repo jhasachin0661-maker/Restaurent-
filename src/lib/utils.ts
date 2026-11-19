@@ -12,3 +12,8 @@ export function formatINR(amount: number): string {
     maximumFractionDigits: 0,
   }).format(amount);
 }
+
+export function assetPath(path: string): string {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/Restaurent-";
+  return `${basePath}${path}`;
+}
